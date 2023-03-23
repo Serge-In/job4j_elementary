@@ -15,7 +15,7 @@ public class Calculator {
         Calculator.plus(1, 2);
         Calculator.plus(10, 11);
 
-        int result3 = func1(100);
-        System.out.println(result3);
+        int result = func1(100);
+        System.out.println(result);
     }
 }
