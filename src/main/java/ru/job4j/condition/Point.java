@@ -6,13 +6,13 @@ public class Point {
     }
 
     public static void main(String[] args) {
-        double result = Point.distance(0, 0, 2, 0);
-        System.out.println("result (0, 0) to (2, 0) " + result);
+        double rsl = Point.distance(0, 0, 2, 0);
+        System.out.println("rsl (0, 0) to (2, 0) " + rsl);
 
-        result = Point.distance(1, 0, 2, 2);
-        System.out.println("result (1, 0) to (2, 2) " + result);
+        rsl = Point.distance(1, 0, 2, 2);
+        System.out.println("rsl (1, 0) to (2, 2) " + rsl);
 
-        result = Point.distance(1, 0, 0, 0);
-        System.out.println("result (1, 0) to (0, 0) " + result);
+        rsl = Point.distance(1, 0, 0, 0);
+        System.out.println("rsl (1, 0) to (0, 0) " + rsl);
     }
 }
