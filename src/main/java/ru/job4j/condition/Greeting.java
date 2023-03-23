@@ -9,4 +9,5 @@ public class Greeting {
         idea += year;
         System.out.println(idea);
     }
+
 }
