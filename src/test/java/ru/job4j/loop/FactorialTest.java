@@ -15,6 +15,14 @@ class FactorialTest {
     }
 
     @Test
+    void whenCalculateFactorialFor2Then2() {
+        int in = 2;
+        int out = Factorial.calc(in);
+        int exp = 2;
+        assertThat(out).isEqualTo(exp);
+    }
+
+    @Test
     void whenCalculateFactorialFor0ThenOne() {
         int in = 0;
         int out = Factorial.calc(in);
