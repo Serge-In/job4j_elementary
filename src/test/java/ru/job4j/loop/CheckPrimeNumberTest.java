@@ -48,6 +48,13 @@ public class CheckPrimeNumberTest {
     }
 
     @Test
+    public void when73() {
+        int number = 73;
+        boolean result = CheckPrimeNumber.check(number);
+        assertThat(result).isTrue();
+    }
+
+    @Test
     public void when1() {
         int number = 1;
         boolean result = CheckPrimeNumber.check(number);
