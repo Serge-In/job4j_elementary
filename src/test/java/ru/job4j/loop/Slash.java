@@ -3,14 +3,11 @@ package ru.job4j.loop;
 public class Slash {
 
     public static void draw(int size) {
-        boolean left, right;
         for (int row = 0; row < size; row++) {
             for (int cell = 0; cell < size; cell++) {
-                left = (cell == row);
-                right = (cell == (size - 1) - row);
-                if (left) {
+                if (cell == row) {
                     System.out.print("0");
-                } else if (right) {
+                } else if (cell == (size - 1) - row) {
                     System.out.print("0");
                 } else {
                     System.out.print(" ");
