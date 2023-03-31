@@ -22,9 +22,9 @@ class TurnTest {
     }
 
     @Test
-    void backIn012Out210() {
-        int[] in = {0, 1, 2};
-        int[] expected = {2, 1, 0};
+    void backIn011Out110() {
+        int[] in = {0, 1, 1};
+        int[] expected = {1, 1, 0};
         int[] result = Turn.back(in);
         assertThat(result).containsExactly(expected);
     }
