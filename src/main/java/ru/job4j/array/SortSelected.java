@@ -6,13 +6,10 @@ public class SortSelected {
      */
     public static int[] sort(int[] data) {
         for (int start = 0; start < data.length - 1; start++) {
-            if (start != FindLoop.indexInRange(
-                    data, MinDiapason.findMin(data, start, data.length - 1), start, data.length - 1)
-            ) {
-                data = SwitchArray.swap(
-                        data, start, FindLoop.indexInRange(
-                                data, MinDiapason.findMin(data, start, data.length - 1), start, data.length - 1)
-                );
+            int min = MinDiapason.findMin(data, start, data.length - 1);
+            int index = FindLoop.indexInRange(data, min, start, data.length - 1);
+            if (start != index) {
+                data = SwitchArray.swap(data, start, index);
             }
         }
         return data;
