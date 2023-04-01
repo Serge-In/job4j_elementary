@@ -30,4 +30,17 @@ public class MatrixCheck {
         }
         return true;
     }
+
+    /**
+     * 6.7.3. Массив из диагонали матрицы.  [#214128]
+     * Возвращает одномерный массив char элементами диагонали из двухмерного массива char.
+     * 2023-04-01
+     */
+    public static char[] extractDiagonal(char[][] board) {
+        char[] rsl = new char[board.length];
+        for (int i = 0; i < board.length; i++) {
+            rsl[i] = board[i][i];
+        }
+        return rsl;
+    }
 }
