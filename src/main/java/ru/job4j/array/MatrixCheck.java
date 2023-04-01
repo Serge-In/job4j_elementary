@@ -43,4 +43,39 @@ public class MatrixCheck {
         }
         return rsl;
     }
+
+    /**
+     * 6.7.4. Выигрышные комбинации в сокобан [#53859]
+     * Проверяет двумерный массив char на заполнение строки или столбца
+     * последовательностью из 5-ти символов 'X'.
+     * 2023-04-01
+     */
+    public static boolean isWin(char[][] board) {
+        int charSequence = 0;
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board[i].length; j++) {
+                if (board[i][j] == 'X') {
+                    charSequence++;
+                    if (charSequence == 5) {
+                        return true;
+                    }
+                } else {
+                    charSequence = 0;
+                }
+            }
+        }
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board[i].length; j++) {
+                if (board[j][i] == 'X') {
+                    charSequence++;
+                    if (charSequence == 5) {
+                        return true;
+                    }
+                } else {
+                    charSequence = 0;
+                }
+            }
+        }
+        return false;
+    }
 }
