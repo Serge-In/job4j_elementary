@@ -36,7 +36,7 @@ public class MatrixCheckTest {
                 {' ', 'X', ' ', ' ', ' '},
                 {' ', ' ', 'X', ' ', ' '},
                 {' ', ' ', ' ', 'X', ' '},
-                {' ', ' ', ' ', ' ', 'X'},
+                {' ', ' ', ' ', ' ', ' '},
         };
         int row = 0;
         boolean result = MatrixCheck.monoHorizontal(input, row);
