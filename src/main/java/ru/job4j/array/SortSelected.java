@@ -5,15 +5,14 @@ public class SortSelected {
      * Сортировка int массива методом выборки
      */
     public static int[] sort(int[] data) {
-        int minNumberInRange;
-        int indexOfMinNumberInRange;
-        int start;
-        int end = data.length - 1;
-        for (start = 0; start < end; start++) {
-            minNumberInRange = MinDiapason.findMin(data, start, end);
-            indexOfMinNumberInRange = FindLoop.indexInRange(data, minNumberInRange, start, end);
-            if (start != indexOfMinNumberInRange) {
-                data = SwitchArray.swap(data, start, indexOfMinNumberInRange);
+        for (int start = 0; start < data.length - 1; start++) {
+            if (start != FindLoop.indexInRange(
+                    data, MinDiapason.findMin(data, start, data.length - 1), start, data.length - 1)
+            ) {
+                data = SwitchArray.swap(
+                        data, start, FindLoop.indexInRange(
+                                data, MinDiapason.findMin(data, start, data.length - 1), start, data.length - 1)
+                );
             }
         }
         return data;
