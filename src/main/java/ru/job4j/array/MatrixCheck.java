@@ -51,44 +51,8 @@ public class MatrixCheck {
      */
     public static boolean isWin(char[][] board) {
         for (int i = 0; i < board.length; i++) {
-            if (board[i][i] == 'X') {
-                if (monoHorizontal(board, i) || monoVertical(board, i)) {
-                    return true;
-                }
-            }
-        }
-        return false;
-    }
-
-    /**
-     * Проверяет двумерный массив char на заполнение строки или столбца
-     * последовательностью из количества countChar символов checkChar.
-     * 2023-04-01
-     */
-    public static boolean charSequence(char[][] board, char checkChar, int countChar) {
-        int charSequence = 0;
-        for (int i = 0; i < board.length; i++) {
-            for (int j = 0; j < board[i].length; j++) {
-                if (board[i][j] == checkChar) {
-                    charSequence++;
-                    if (charSequence == countChar) {
-                        return true;
-                    }
-                } else {
-                    charSequence = 0;
-                }
-            }
-        }
-        for (int i = 0; i < board.length; i++) {
-            for (int j = 0; j < board[i].length; j++) {
-                if (board[j][i] == checkChar) {
-                    charSequence++;
-                    if (charSequence == countChar) {
-                        return true;
-                    }
-                } else {
-                    charSequence = 0;
-                }
+            if (board[i][i] == 'X' && (monoHorizontal(board, i) || monoVertical(board, i))) {
+                return true;
             }
         }
         return false;
