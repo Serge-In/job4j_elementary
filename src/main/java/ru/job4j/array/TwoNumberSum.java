@@ -17,18 +17,16 @@ public class TwoNumberSum {
      */
     public static int[] getIndexes(int[] array, int target) {
         int i = 0;
-        int j = 1;
-        while (i < array.length && j < array.length) {
+        int j = array.length - 1;
+        while (i < array.length - 1) {
             if (array[i] + array[j] == target) {
-                int[] result = {i, j};
-                return result;
-            } else if (j == array.length - 1 || array[i] + array[j] > target) {
+                return new int[]{i, j};
+            } else if (i == j - 1) {
                 i++;
-                j = i + 1;
+                j = array.length - 1;
             }
-            j++;
+            j--;
         }
-        int[] result = {};
-        return result;
+        return new int[]{};
     }
 }
