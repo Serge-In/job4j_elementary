@@ -67,7 +67,7 @@ public class MatrixCheck {
         int charSequence = 0;
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < board[i].length; j++) {
-                if (board[i][j] == checkChar) {
+                if (board[j][i] == checkChar) {
                     charSequence++;
                     if (charSequence == countChar) {
                         return true;
@@ -80,7 +80,7 @@ public class MatrixCheck {
 
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < board[i].length; j++) {
-                if (board[j][i] == checkChar) {
+                if (board[i][j] == checkChar) {
                     charSequence++;
                     if (charSequence == countChar) {
                         return true;
