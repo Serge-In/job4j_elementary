@@ -3,8 +3,6 @@ package ru.job4j.condition;
 import org.junit.Assert;
 import org.junit.Test;
 
-import static ru.job4j.condition.Point.*;
-
 public class PointTest {
 
     @Test
@@ -14,7 +12,9 @@ public class PointTest {
         int x2 = 5;
         int y2 = 5;
         double exp = 7.07;
-        double out = distance(x1, y1, x2, y2);
+        Point point1 = new Point(x1, y1);
+        Point point2 = new Point(x2, y2);
+        double out = point1.distance(point2);
         double eps = 0.01;
         Assert.assertEquals(exp, out, eps);
     }
@@ -26,7 +26,9 @@ public class PointTest {
         int x2 = 1;
         int y2 = 5;
         double exp = 5.09;
-        double out = distance(x1, y1, x2, y2);
+        Point point1 = new Point(x1, y1);
+        Point point2 = new Point(x2, y2);
+        double out = point1.distance(point2);
         double eps = 0.01;
         Assert.assertEquals(exp, out, eps);
     }
@@ -38,7 +40,9 @@ public class PointTest {
         int x2 = 1;
         int y2 = 2;
         double exp = 2.82;
-        double out = distance(x1, y1, x2, y2);
+        Point point1 = new Point(x1, y1);
+        Point point2 = new Point(x2, y2);
+        double out = point1.distance(point2);
         double eps = 0.01;
         Assert.assertEquals(exp, out, eps);
     }
