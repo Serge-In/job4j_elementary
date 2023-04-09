@@ -1,5 +1,9 @@
 package ru.job4j.array;
 
+/**
+ * Перестановка двух элементов int массива по их индексам source, dest
+ * 2023-03-31
+ */
 public class SwitchArray {
     public static int[] swap(int[] array, int source, int dest) {
         int temp = array[source];
