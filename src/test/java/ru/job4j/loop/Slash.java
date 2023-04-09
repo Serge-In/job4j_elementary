@@ -9,7 +9,7 @@ public class Slash {
                     System.out.print("0");
                 } else if (cell == (size - 1) - row) {
                     System.out.print("0");
-                } else {
+                    } else {
                     System.out.print(" ");
                 }
             }
