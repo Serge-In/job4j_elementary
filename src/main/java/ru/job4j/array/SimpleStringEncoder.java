@@ -6,24 +6,21 @@ public class SimpleStringEncoder {
         int counter = 1;
         String result = "";
         for (int i = 1; i < input.length(); i++) {
-            if (input.charAt(i) == symbol){
+            if (input.charAt(i) == symbol) {
                 counter++;
-            }
-            else if (counter == 1){
+            } else if (counter == 1) {
                 result += String.valueOf(symbol);
                 symbol = input.charAt(i);
-            }
-            else{
+            } else {
                 result += String.valueOf(symbol) + counter;
                 symbol = input.charAt(i);
                 counter = 1;
 
             }
         }
-        if (counter == 1){
+        if (counter == 1) {
             result += String.valueOf(symbol);
-        }
-        else{
+        } else {
             result += String.valueOf(symbol) + counter;
         }
         return result;
