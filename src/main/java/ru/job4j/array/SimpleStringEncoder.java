@@ -1,5 +1,10 @@
 package ru.job4j.array;
 
+/**
+ * 3. Тестовое задание. Блок "Базовый синтаксис" [#505049  [#505049 #420688]]
+ * 2023-06-07
+ */
+
 public class SimpleStringEncoder {
     public static String encode(String input) {
         char symbol = input.charAt(0);
